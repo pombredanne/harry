@@ -52,11 +52,18 @@ void log_print(long, long, long);
 
 #if LIBCONFIG_VER_MAJOR > 1 || LIBCONFIG_VER_MINOR > 3
 #define CONFIG_LOOKUP_INT(cfg, s, i) config_lookup_int(cfg, s, i)
+#define CONFIG_SETTING_LOOKUP_INT(cfgsetting, s, i) config_setting_lookup_int(cfgsetting, s, i)
 
 #else
 #define CONFIG_LOOKUP_INT(cfg, s, i) { \
 	long l; \
 	config_lookup_int(cfg, s, &l); \
+	*i = (int) l; \
+}
+
+#define CONFIG_SETTING_LOOKUP_INT(cfgsetting, s, i) { \
+	long l; \
+	config_setting_lookup_int(cfgsetting, s, &l); \
 	*i = (int) l; \
 }
 #endif
