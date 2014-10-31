@@ -89,7 +89,7 @@ char *measure_config(const char *name)
         hstring_delim_reset();
 
     /* Enable global cache */
-    config_lookup_int(&cfg, "measures.global_cache", &global_cache);
+    CONFIG_LOOKUP_INT(&cfg, "measures.global_cache", &global_cache);
 
     /* Configure */
     idx = measure_match(name);

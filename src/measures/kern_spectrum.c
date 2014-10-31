@@ -49,7 +49,7 @@ void kern_spectrum_config()
     const char *str;
 
     /* Length parameter */
-    config_lookup_int(&cfg, "measures.kern_spectrum.length", &len);
+    CONFIG_LOOKUP_INT(&cfg, "measures.kern_spectrum.length", &len);
 
     /* Normalization */
     config_lookup_string(&cfg, "measures.kern_spectrum.norm", &str);

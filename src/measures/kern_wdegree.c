@@ -44,8 +44,8 @@ void kern_wdegree_config()
 {
     const char *str;
 
-    config_lookup_int(&cfg, "measures.kern_wdegree.degree", &degree);
-    config_lookup_int(&cfg, "measures.kern_wdegree.shift", &shift);
+    CONFIG_LOOKUP_INT(&cfg, "measures.kern_wdegree.degree", &degree);
+    CONFIG_LOOKUP_INT(&cfg, "measures.kern_wdegree.shift", &shift);
 
     /* Normalization */
     config_lookup_string(&cfg, "measures.kern_wdegree.norm", &str);

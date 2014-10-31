@@ -36,7 +36,7 @@ static int level = 0;
 void dist_compression_config()
 {
     /* Configuration */
-    config_lookup_int(&cfg, "measures.dist_compression.level", &level);
+	CONFIG_LOOKUP_INT(&cfg, "measures.dist_compression.level", &level);
 }
 
 

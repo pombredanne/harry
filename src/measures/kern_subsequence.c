@@ -44,7 +44,7 @@ void kern_subsequence_config()
 {
     const char *str;
 
-    config_lookup_int(&cfg, "measures.kern_subsequence.length", &length);
+    CONFIG_LOOKUP_INT(&cfg, "measures.kern_subsequence.length", &length);
     config_lookup_float(&cfg, "measures.kern_subsequence.lambda", &lambda);
 
     /* Normalization */

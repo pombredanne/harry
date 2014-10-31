@@ -351,7 +351,7 @@ static void harry_init()
     config_lookup_string(&cfg, "measures.measure", &cfg_str);
     measure = measure_config(cfg_str);
 
-    config_lookup_int(&cfg, "measures.num_threads", &nthreads);
+    CONFIG_LOOKUP_INT(&cfg, "measures.num_threads", &nthreads);
 #ifdef HAVE_OPENMP
     if (nthreads <= 0)
         nthreads = omp_get_num_procs();
@@ -379,7 +379,7 @@ static hstring_t *harry_read(char *input, int *num)
     hstring_t *strs = NULL;
 
     /* Get chunk size */
-    config_lookup_int(&cfg, "input.chunk_size", &chunk);
+    CONFIG_LOOKUP_INT(&cfg, "input.chunk_size", &chunk);
 
     /* Open input */
     config_lookup_string(&cfg, "input.input_format", &cfg_str);
